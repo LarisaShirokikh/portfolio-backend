@@ -1,0 +1,24 @@
+[project]
+name = "portfolio-backend"
+version = "0.1.0"
+description = "Backend API for developer portfolio"
+authors = [
+    {name = "Lora Sher",email = "lorashirokikh@yandex.ru"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi (>=0.121.1,<0.122.0)",
+    "uvicorn[standard] (>=0.38.0,<0.39.0)",
+    "sqlalchemy (>=2.0.44,<3.0.0)",
+    "alembic (>=1.17.1,<2.0.0)",
+    "asyncpg (>=0.30.0,<0.31.0)",
+    "pydantic-settings (>=2.12.0,<3.0.0)",
+    "python-dotenv (>=1.2.1,<2.0.0)",
+    "greenlet (>=3.2.4,<4.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
