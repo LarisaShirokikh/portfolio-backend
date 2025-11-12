@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import settings
 from app.api.v1.interview_questions import router as questions_router
+from app.api.v1.projects import router as projects_router  # Добавляем
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -21,6 +22,7 @@ app.add_middleware(
 
 # Подключаем роутеры
 app.include_router(questions_router, prefix="/api/v1")
+app.include_router(projects_router, prefix="/api/v1")  # Добавляем
 
 
 @app.get("/")
