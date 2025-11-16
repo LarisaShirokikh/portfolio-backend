@@ -11,11 +11,11 @@ class Project(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     title: Mapped[str] = mapped_column(String(255))
     description: Mapped[str] = mapped_column(Text)
-    tech_stack: Mapped[str] = mapped_column(String(500))  # "Python, FastAPI, PostgreSQL"
+    tech_stack: Mapped[str] = mapped_column(String(500))  
     github_url: Mapped[str | None] = mapped_column(String(500), nullable=True)
     demo_url: Mapped[str | None] = mapped_column(String(500), nullable=True)
     image_url: Mapped[str | None] = mapped_column(String(500), nullable=True)
     is_featured: Mapped[bool] = mapped_column(Boolean, default=False)
-    order: Mapped[int] = mapped_column(default=0)  # Для сортировки
+    order: Mapped[int] = mapped_column(default=0)
     created_at: Mapped[datetime] = mapped_column(default=datetime.utcnow)
     updated_at: Mapped[datetime] = mapped_column(default=datetime.utcnow, onupdate=datetime.utcnow)

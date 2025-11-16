@@ -11,6 +11,8 @@ from dotenv import load_dotenv
 from app.core.database import Base
 from app.models.interview_question import InterviewQuestion  
 from app.models.project import Project
+from app.models.about import About
+
 load_dotenv()
 
 # this is the Alembic Config object

@@ -8,6 +8,11 @@ from app.schemas.project import (
     ProjectUpdate,
     ProjectResponse,
 )
+from app.schemas.about import (
+    AboutCreate,
+    AboutUpdate,
+    AboutResponse,
+)
 
 __all__ = [
     "InterviewQuestionCreate",
@@ -16,4 +21,7 @@ __all__ = [
     "ProjectCreate",
     "ProjectUpdate",
     "ProjectResponse",
+    "AboutCreate",
+    "AboutUpdate",
+    "AboutResponse",
 ]
